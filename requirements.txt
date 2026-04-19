@@ -1,0 +1,29 @@
+# backend/requirements.txt
+# ALONE Audio Studio — Python Backend Dependencies
+
+# ── Web Framework ─────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+aiofiles==23.2.1
+
+# ── Config & Utilities ────────────────────────────────────────
+python-dotenv==1.0.1
+pydantic==2.7.1
+httpx==0.27.0
+
+# ── AI Audio Separation ───────────────────────────────────────
+# Option A: Demucs (recommended — better quality, 4-stem + 6-stem)
+demucs==4.0.1
+
+# PyTorch (CPU-only for Render/Railway free tier — remove '--index-url' line if using GPU)
+# NOTE: Install PyTorch FIRST with:
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+# Then install the rest:
+#   pip install -r requirements.txt
+
+# ── Audio Processing ──────────────────────────────────────────
+soundfile==0.12.1
+librosa==0.10.2
+numpy==1.26.4
+scipy==1.13.0
